@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import AddHomeForm from './Components/Home/AddHomeForm';
+import { Switch, Route } from 'react-router-dom';
+import Homes from './Components/Home/Homes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Switch>
+        <Route exact path="/addHomeForm" component={AddHomeForm} />
+        <Route exact path="/" component={Homes} />
+      </Switch>
+    </main>
   );
 }
 
