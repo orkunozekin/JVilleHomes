@@ -17,7 +17,8 @@ const Homes = () => {
 
     //get all homes from the server
     const getAllHomes = () => {
-        axios.get(config.API_ENDPOINT + "/allHomes")
+        // axios.get(config.API_ENDPOINT + "/allHomes")
+        axios.get("https://jville-server.herokuapp.com/")
             .then(res => {
                 console.log(res.data);
                 setHomes(res.data);
