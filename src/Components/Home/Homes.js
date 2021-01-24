@@ -30,7 +30,7 @@ const Homes = () => {
                 {homes.map((home, key) => {
                     return <li key={key}>
                         <h3>Address: {home.address}</h3>
-                        <img alt="home-image" src={home.imgURL} />
+                        <img alt="home" src={home.imgURL} />
                     </li>
                 })}
             </ul>
