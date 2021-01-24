@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import config from '../../config';
 import axios from 'axios';
 
 const AddHomeForm = () => {
 
 
- 
+
     //////STATE
 
-  
+
 
     //img URL
     // const [homeImage, setHomeImage] = useState('');
@@ -21,7 +21,7 @@ const AddHomeForm = () => {
 
 
 
-   
+
     //Add a new home and send it to the DB
     const createNewHome = (ev) => {
         ev.preventDefault();

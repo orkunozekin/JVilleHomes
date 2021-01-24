@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import config from '../../config';
 import './Homes.css';
 import { Link } from 'react-router-dom';
 
@@ -31,7 +30,7 @@ const Homes = () => {
                 {homes.map((home, key) => {
                     return <li key={key}>
                         <h3>Address: {home.address}</h3>
-                        <img src={home.imgURL} />
+                        <img alt="home-image" src={home.imgURL} />
                     </li>
                 })}
             </ul>
