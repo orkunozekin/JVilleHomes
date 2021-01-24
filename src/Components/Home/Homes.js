@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Homes.css';
 import { Link } from 'react-router-dom';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 const Homes = () => {
 
@@ -25,17 +26,34 @@ const Homes = () => {
     }
 
     return (
-        <div className="homes">
-            <ul>
-                {homes.map((home, key) => {
-                    return <li key={key}>
-                        <h3>Address: {home.address}</h3>
-                        <img alt="home" src={home.imgURL} />
-                    </li>
-                })}
-            </ul>
+        //     <Container className="miniBio">
 
-            <Link to="/addHomeForm">Add New Home</Link>
+        //         {homes.map((home, key) => {
+        //             return <Row className="miniBio-container" key={key}>
+        //                 <Col><h3>Address: {home.address}</h3></Col>
+        //                 <Col><Image className="bioMiniThumbnail" alt="home" src={home.imgURL} /></Col>
+        //             </Row>
+        //         })}
+
+
+        //         <Link to="/addHomeForm">Add New Home</Link>
+        //     </Container>
+        <div>
+
+            {
+                homes.map((home, key) => {
+                    return (
+                        <Container key={key} className="miniBio">
+                            <Row className="miniBio-container">
+                                <Col><h3>Address: {home.address}</h3></Col>
+                                <Col><Image className="bioMiniThumbnail" alt="home" src={home.imgURL} /></Col>
+                            </Row>
+                        </Container>
+                    )
+                })
+            }
+
+            <Link to="/addHomeForm"><b>Add New Home</b></Link >
         </div>
     )
 }

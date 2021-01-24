@@ -2,14 +2,31 @@
     margin-top: 50vh;
 } */
 
-img {
-    width: 40vw;
-}
-
 a {
     text-decoration: none;
 }
 
 li {
     list-style-type: none;
+}
+
+.bioMiniThumbnail {
+    width: 40vw;
+}
+
+.miniBioDetails {
+    margin-left: 30px;
+}
+
+.miniBio-container {
+    margin-bottom: 0;
+}
+
+.miniBio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+    background-color: #f8f8ff;
+    border-bottom: solid #d2d2d2 1px;
+    margin: 10vh 5vw;
 }
