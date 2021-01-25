@@ -26,20 +26,7 @@ const Homes = () => {
     }
 
     return (
-        //     <Container className="miniBio">
-
-        //         {homes.map((home, key) => {
-        //             return <Row className="miniBio-container" key={key}>
-        //                 <Col><h3>Address: {home.address}</h3></Col>
-        //                 <Col><Image className="bioMiniThumbnail" alt="home" src={home.imgURL} /></Col>
-        //             </Row>
-        //         })}
-
-
-        //         <Link to="/addHomeForm">Add New Home</Link>
-        //     </Container>
         <div>
-
             {
                 homes.map((home, key) => {
                     return (
@@ -52,7 +39,6 @@ const Homes = () => {
                     )
                 })
             }
-
             <Link to="/addHomeForm"><b>Add New Home</b></Link >
         </div>
     )

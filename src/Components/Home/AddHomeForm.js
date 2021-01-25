@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import config from '../../config';
 import axios from 'axios';
+import { useHistory } from "react-router-dom";
+
 
 const AddHomeForm = () => {
 
+
+    //router props history to change the URI.
+    let history = useHistory();
 
 
     //////STATE
@@ -26,6 +31,7 @@ const AddHomeForm = () => {
     const createNewHome = (ev) => {
         ev.preventDefault();
         axios.post(config.API_ENDPOINT + "/newHome", home)
+        history.push('/');
     }
 
 
